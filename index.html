@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EliteShop - Profesyonel E-Ticaret</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="payment.html">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>EliteShop</span>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Ürün, kategori veya marka ara...">
+                    <i class="fas fa-search"></i>
+                </div>
+                
+                <div class="header-actions">
+                    <button class="action-btn">
+                        <i class="fas fa-user"></i>
+                        <span>Hesabım</span>
+                    </button>
+                    <button class="action-btn">
+                        <i class="fas fa-heart"></i>
+                        <span>Favoriler</span>
+                    </button>
+                    <button class="action-btn cart-btn" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Sepet</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Premium <span class="highlight">Alışveriş</span> Deneyimi</h1>
+                <p>En kaliteli ürünler, en uygun fiyatlar ve hızlı teslimat ile mükemmel alışveriş deneyimi yaşayın.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary">Alışverişe Başla</button>
+                    <button class="btn-secondary">Kategorileri İncele</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Shopping">
+            </div>
+        </div>
+        
+        <div class="hero-features">
+            <div class="feature">
+                <i class="fas fa-truck"></i>
+                <div>
+                    <h3>Ücretsiz Kargo</h3>
+                    <p>250₺ üzeri siparişlerde</p>
+                </div>
+            </div>
+            <div class="feature">
+                <i class="fas fa-shield-alt"></i>
+                <div>
+                    <h3>Güvenli Ödeme</h3>
+                    <p>256-bit SSL koruması</p>
+                </div>
+            </div>
+            <div class="feature">
+                <i class="fas fa-star"></i>
+                <div>
+                    <h3>Premium Kalite</h3>
+                    <p>Seçkin ürün koleksiyonu</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="filter-section">
+                        <h3>Kategoriler</h3>
+                        <div class="category-list" id="categoryList">
+                            <!-- Categories will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Products Section -->
+                <section class="products-section">
+                    <div class="products-header">
+                        <div class="products-info">
+                            <span id="productCount">0 ürün bulundu</span>
+                        </div>
+                        <div class="products-controls">
+                            <select id="sortSelect">
+                                <option value="featured">Öne Çıkanlar</option>
+                                <option value="price-low">Fiyat: Düşükten Yükseğe</option>
+                                <option value="price-high">Fiyat: Yüksekten Düşüğe</option>
+                                <option value="rating">En Yüksek Puan</option>
+                                <option value="name">İsim: A-Z</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="products-grid" id="productsGrid">
+                        <!-- Products will be populated by JavaScript -->
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Sepetim</h2>
+            <button class="close-btn" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-content" id="cartContent">
+            <!-- Cart items will be populated by JavaScript -->
+        </div>
+        <div class="cart-footer" id="cartFooter">
+            <!-- Cart total and checkout button will be populated by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div class="modal-overlay" id="productModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeProductModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body" id="modalBody">
+                <!-- Product details will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>EliteShop</span>
+                    </div>
+                    <p>Türkiye'nin en güvenilir online alışveriş platformu. Premium kalitede ürünler, hızlı teslimat ve mükemmel müşteri hizmetleri.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Hızlı Linkler</h3>
+                    <ul>
+                        <li><a href="#">Hakkımızda</a></li>
+                        <li><a href="#">İletişim</a></li>
+                        <li><a href="#">Kargo & Teslimat</a></li>
+                        <li><a href="#">İade & Değişim</a></li>
+                        <li><a href="#">Gizlilik Politikası</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Kategoriler</h3>
+                    <ul>
+                        <li><a href="#">Elektronik</a></li>
+                        <li><a href="#">Moda & Giyim</a></li>
+                        <li><a href="#">Ev & Yaşam</a></li>
+                        <li><a href="#">Spor & Outdoor</a></li>
+                        <li><a href="#">Kitap & Medya</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>İletişim</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Maslak Mahallesi, Büyükdere Cad. No:123<br>34485 Sarıyer/İstanbul</p>
+                        <p><i class="fas fa-phone"></i> +90 212 123 45 67</p>
+                        <p><i class="fas fa-envelope"></i> info@eliteshop.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 EliteShop. Tüm hakları saklıdır.</p>
+                <div class="payment-methods">
+                    <span>Kabul Edilen Kartlar:</span>
+                    <div class="cards">
+                        <span>Visa</span>
+                        <span>Mastercard</span>
+                        <span>American Express</span>
+                        <span>Troy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
