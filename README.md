@@ -85,7 +85,7 @@
 1. **Projeyi klonlayın:**
 ```bash
 git clone https://github.com/Can-Ozan/E-Ticaret-Sitesi.git
-cd eliteshop
+cd E-Ticaret-Sitesi
 ```
 
 2. **Tarayıcıda açın:**
@@ -130,11 +130,6 @@ eliteshop/
 2. Teslimat bilgilerinizi doldurun
 3. Ödeme yöntemini seçin
 4. "Siparişi Tamamla" ile işlemi bitirin
-
-### 🎁 **İndirim Kodları**
-- `WELCOME10` - %10 indirim
-- `SAVE50` - 50₺ sabit indirim
-- `FREESHIP` - Ücretsiz kargo
 
 ---
 
@@ -222,15 +217,15 @@ Bu proje **MIT Lisansı** altında lisanslanmıştır. Detaylar için [LICENSE](
 
 ## 📞 İletişim
 
-- **GitHub**: [@kullaniciadi](https://github.com/Can-Ozan)
+- **GitHub**: https://github.com/Can-Ozan
 - **Email**: yusufcanozan9@gmail.com
-- **LinkedIn**: [Profil Linki](https://linkedin.com/in/yusufcanozan)
+- **LinkedIn**: https://linkedin.com/in/yusufcanozan
 
 ---
 
 <div align="center">
   <h3>⭐ Projeyi beğendiyseniz yıldız vermeyi unutmayın!</h3>
-  <p>Made with ❤️ by [Your Name]</p>
+  <p>Made with ❤️ by Yusuf Can Ozan</p>
 </div>
 
 ---
