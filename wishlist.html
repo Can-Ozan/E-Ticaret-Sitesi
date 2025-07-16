@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorilerim - EliteShop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="wishlist-style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo" onclick="goHome()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>EliteShop</span>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Favorilerimde ara...">
+                    <i class="fas fa-search"></i>
+                </div>
+                
+                <div class="header-actions">
+                    <button class="action-btn" onclick="goHome()">
+                        <i class="fas fa-home"></i>
+                        <span>Ana Sayfa</span>
+                    </button>
+                    <button class="action-btn" id="userBtn">
+                        <i class="fas fa-user"></i>
+                        <span id="userBtnText">Hesabım</span>
+                    </button>
+                    <button class="action-btn cart-btn" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Sepet</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="breadcrumb">
+                    <a href="index.html">Ana Sayfa</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Favorilerim</span>
+                </div>
+                
+                <div class="page-title">
+                    <h1><i class="fas fa-heart"></i> Favorilerim</h1>
+                    <p>Beğendiğiniz ürünleri buradan takip edebilirsiniz</p>
+                </div>
+            </div>
+
+            <!-- Wishlist Content -->
+            <div class="wishlist-wrapper">
+                <!-- Wishlist Header -->
+                <div class="wishlist-header">
+                    <div class="wishlist-info">
+                        <span id="wishlistCount">0 ürün</span>
+                        <span>favorilerinizde</span>
+                    </div>
+                    
+                    <div class="wishlist-controls">
+                        <select id="sortSelect">
+                            <option value="newest">En Yeni</option>
+                            <option value="oldest">En Eski</option>
+                            <option value="price-low">Fiyat: Düşük → Yüksek</option>
+                            <option value="price-high">Fiyat: Yüksek → Düşük</option>
+                            <option value="name">İsim: A-Z</option>
+                        </select>
+                        
+                        <div class="view-toggle">
+                            <button class="view-btn active" data-view="grid">
+                                <i class="fas fa-th-large"></i>
+                            </button>
+                            <button class="view-btn" data-view="list">
+                                <i class="fas fa-list"></i>
+                            </button>
+                        </div>
+                        
+                        <button class="clear-all-btn" onclick="clearAllWishlist()">
+                            <i class="fas fa-trash"></i>
+                            Tümünü Temizle
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Wishlist Grid -->
+                <div class="wishlist-grid" id="wishlistGrid">
+                    <!-- Wishlist items will be populated by JavaScript -->
+                </div>
+
+                <!-- Empty State -->
+                <div class="empty-wishlist" id="emptyWishlist" style="display: none;">
+                    <div class="empty-icon">
+                        <i class="fas fa-heart-broken"></i>
+                    </div>
+                    <h3>Favori listeniz boş</h3>
+                    <p>Beğendiğiniz ürünleri favorilere ekleyerek buradan takip edebilirsiniz</p>
+                    <button class="btn-primary" onclick="goHome()">
+                        <i class="fas fa-shopping-bag"></i>
+                        Alışverişe Başla
+                    </button>
+                </div>
+            </div>
+
+            <!-- Recommendations -->
+            <div class="recommendations" id="recommendations">
+                <h2>Size Özel Öneriler</h2>
+                <div class="recommendations-grid" id="recommendationsGrid">
+                    <!-- Recommendations will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Cart Sidebar (from main page) -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Sepetim</h2>
+            <button class="close-btn" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-content" id="cartContent">
+            <!-- Cart items will be populated by JavaScript -->
+        </div>
+        <div class="cart-footer" id="cartFooter">
+            <!-- Cart total and checkout button will be populated by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Share Modal -->
+    <div class="modal-overlay" id="shareModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Favori Listenizi Paylaşın</h3>
+                <button class="modal-close" onclick="closeShareModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Favori listenizi arkadaşlarınızla paylaşın</p>
+                <div class="share-options">
+                    <button class="share-btn whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        WhatsApp
+                    </button>
+                    <button class="share-btn facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        Facebook
+                    </button>
+                    <button class="share-btn twitter">
+                        <i class="fab fa-twitter"></i>
+                        Twitter
+                    </button>
+                    <button class="share-btn copy">
+                        <i class="fas fa-copy"></i>
+                        Linki Kopyala
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="wishlist-script.js"></script>
+</body>
+</html>

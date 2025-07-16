@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap / Kayıt Ol - EliteShop</title>
+    <link rel="stylesheet" href="auth-style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo" onclick="goHome()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>EliteShop</span>
+                </div>
+                
+                <button class="back-btn" onclick="goHome()">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Ana Sayfaya Dön</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="auth-wrapper">
+                <div class="auth-container">
+                    <!-- Login Form -->
+                    <div class="auth-form" id="loginForm">
+                        <div class="form-header">
+                            <h2>Giriş Yap</h2>
+                            <p>Hesabınıza giriş yapın</p>
+                        </div>
+                        
+                        <form id="loginFormElement">
+                            <div class="form-group">
+                                <label for="loginEmail">E-posta</label>
+                                <input type="email" id="loginEmail" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="loginPassword">Şifre</label>
+                                <div class="password-input">
+                                    <input type="password" id="loginPassword" name="password" required>
+                                    <button type="button" class="toggle-password" onclick="togglePassword('loginPassword')">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="form-options">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="rememberMe">
+                                    <span class="checkmark"></span>
+                                    Beni hatırla
+                                </label>
+                                <a href="#" class="forgot-password">Şifremi unuttum</a>
+                            </div>
+                            
+                            <button type="submit" class="auth-btn">Giriş Yap</button>
+                        </form>
+                        
+                        <div class="auth-divider">
+                            <span>veya</span>
+                        </div>
+                        
+                        <div class="social-login">
+                            <button class="social-btn google">
+                                <i class="fab fa-google"></i>
+                                Google ile Giriş
+                            </button>
+                            <button class="social-btn facebook">
+                                <i class="fab fa-facebook-f"></i>
+                                Facebook ile Giriş
+                            </button>
+                        </div>
+                        
+                        <div class="auth-switch">
+                            <p>Hesabınız yok mu? <a href="#" onclick="switchToRegister()">Kayıt olun</a></p>
+                        </div>
+                    </div>
+
+                    <!-- Register Form -->
+                    <div class="auth-form hidden" id="registerForm">
+                        <div class="form-header">
+                            <h2>Kayıt Ol</h2>
+                            <p>Yeni hesap oluşturun</p>
+                        </div>
+                        
+                        <form id="registerFormElement">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">Ad</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Soyad</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="registerEmail">E-posta</label>
+                                <input type="email" id="registerEmail" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Telefon</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="registerPassword">Şifre</label>
+                                <div class="password-input">
+                                    <input type="password" id="registerPassword" name="password" required>
+                                    <button type="button" class="toggle-password" onclick="togglePassword('registerPassword')">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                                <div class="password-strength" id="passwordStrength"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="confirmPassword">Şifre Tekrar</label>
+                                <div class="password-input">
+                                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                                    <button type="button" class="toggle-password" onclick="togglePassword('confirmPassword')">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="birthDate">Doğum Tarihi</label>
+                                <input type="date" id="birthDate" name="birthDate">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="gender">Cinsiyet</label>
+                                <select id="gender" name="gender">
+                                    <option value="">Seçiniz</option>
+                                    <option value="male">Erkek</option>
+                                    <option value="female">Kadın</option>
+                                    <option value="other">Diğer</option>
+                                </select>
+                            </div>
+                            
+                            <div class="agreements">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="termsAgreement" required>
+                                    <span class="checkmark"></span>
+                                    <a href="#" target="_blank">Kullanım Koşulları</a>'nı kabul ediyorum
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="privacyAgreement" required>
+                                    <span class="checkmark"></span>
+                                    <a href="#" target="_blank">Gizlilik Politikası</a>'nı kabul ediyorum
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="marketingAgreement">
+                                    <span class="checkmark"></span>
+                                    Kampanya ve fırsatlardan haberdar olmak istiyorum
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="auth-btn">Kayıt Ol</button>
+                        </form>
+                        
+                        <div class="auth-switch">
+                            <p>Zaten hesabınız var mı? <a href="#" onclick="switchToLogin()">Giriş yapın</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Auth Benefits -->
+                <div class="auth-benefits">
+                    <h3>Üye Avantajları</h3>
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <i class="fas fa-shipping-fast"></i>
+                            <div>
+                                <h4>Hızlı Alışveriş</h4>
+                                <p>Kayıtlı adres ve ödeme bilgileri</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-heart"></i>
+                            <div>
+                                <h4>Favori Ürünler</h4>
+                                <p>Beğendiğiniz ürünleri kaydedin</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-gift"></i>
+                            <div>
+                                <h4>Özel Kampanyalar</h4>
+                                <p>Sadece üyelere özel indirimler</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-history"></i>
+                            <div>
+                                <h4>Sipariş Geçmişi</h4>
+                                <p>Tüm siparişlerinizi takip edin</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="auth-script.js"></script>
+</body>
+</html>

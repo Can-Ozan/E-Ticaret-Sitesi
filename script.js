@@ -200,6 +200,8 @@ const categories = [
 
 // Global State
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
+let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+let currentUser = JSON.parse(localStorage.getItem('currentUser')) || null;
 let currentCategory = 'all';
 let currentSort = 'featured';
 let searchQuery = '';
@@ -220,14 +222,74 @@ const sortSelect = document.getElementById('sortSelect');
 
 // Initialize App
 document.addEventListener('DOMContentLoaded', function() {
+    // Load language system
+    if (typeof languageManager !== 'undefined') {
+        languageManager.updatePageContent();
+    }
+    
+    checkAuthStatus();
     renderCategories();
     renderProducts();
     updateCartUI();
+    updateWishlistUI();
     
     // Event Listeners
     searchInput.addEventListener('input', handleSearch);
     sortSelect.addEventListener('change', handleSort);
 });
+
+// Check Authentication Status
+function checkAuthStatus() {
+    const userBtn = document.querySelector('.action-btn');
+    const userBtnText = userBtn?.querySelector('span');
+    
+    if (currentUser && userBtnText) {
+        userBtnText.textContent = currentUser.firstName;
+        userBtn.onclick = () => showUserMenu();
+    }
+}
+
+// Show User Menu
+function showUserMenu() {
+    const menu = document.createElement('div');
+    menu.className = 'user-dropdown';
+    menu.innerHTML = `
+        <div class="dropdown-content">
+            <a href="profile.html"><i class="fas fa-user"></i> Profilim</a>
+            <a href="orders.html"><i class="fas fa-box"></i> Siparişlerim</a>
+            <a href="wishlist.html"><i class="fas fa-heart"></i> Favorilerim</a>
+            <a href="reviews.html"><i class="fas fa-star"></i> Yorumlarım</a>
+            <div class="dropdown-divider"></div>
+            <a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Çıkış Yap</a>
+        </div>
+    `;
+    
+    // Position and show menu
+    document.body.appendChild(menu);
+    
+    // Remove menu when clicking outside
+    setTimeout(() => {
+        document.addEventListener('click', function removeMenu(e) {
+            if (!menu.contains(e.target)) {
+                menu.remove();
+                document.removeEventListener('click', removeMenu);
+            }
+        });
+    }, 100);
+}
+
+// Logout
+function logout() {
+    if (confirm('Çıkış yapmak istediğinizden emin misiniz?')) {
+        localStorage.removeItem('currentUser');
+        localStorage.removeItem('rememberUser');
+        currentUser = null;
+        showNotification('Başarıyla çıkış yaptınız', 'info');
+        setTimeout(() => {
+            location.reload();
+        }, 1500);
+    }
+}
 
 // Render Categories
 function renderCategories() {
@@ -343,7 +405,7 @@ function createProductCard(product) {
                     <button class="action-icon" onclick="openProductModal(${product.id})">
                         <i class="fas fa-eye"></i>
                     </button>
-                    <button class="action-icon">
+                    <button class="action-icon ${isInWishlist(product.id) ? 'active' : ''}" onclick="toggleWishlist(${product.id})">
                         <i class="fas fa-heart"></i>
                     </button>
                 </div>
@@ -369,6 +431,75 @@ function createProductCard(product) {
             </div>
         </div>
     `;
+}
+
+// Check if product is in wishlist
+function isInWishlist(productId) {
+    return wishlist.some(item => item.id === productId);
+}
+
+// Toggle Wishlist
+function toggleWishlist(productId) {
+    if (!currentUser) {
+        showNotification('Favorilere eklemek için giriş yapmalısınız', 'error');
+        setTimeout(() => {
+            window.location.href = 'auth.html';
+        }, 2000);
+        return;
+    }
+    
+    const product = products.find(p => p.id === productId);
+    if (!product) return;
+    
+    const existingIndex = wishlist.findIndex(item => item.id === productId);
+    
+    if (existingIndex !== -1) {
+        // Remove from wishlist
+        wishlist.splice(existingIndex, 1);
+        showNotification('Ürün favorilerden kaldırıldı', 'info');
+    } else {
+        // Add to wishlist
+        const wishlistItem = {
+            ...product,
+            addedAt: new Date().toISOString(),
+            priceHistory: [{
+                price: product.price,
+                date: new Date().toISOString()
+            }]
+        };
+        wishlist.push(wishlistItem);
+        showNotification('Ürün favorilere eklendi!', 'success');
+    }
+    
+    saveWishlist();
+    updateWishlistUI();
+    renderProducts(); // Re-render to update heart icons
+}
+
+// Save Wishlist
+function saveWishlist() {
+    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+    
+    // Also save to user data if logged in
+    if (currentUser) {
+        let users = JSON.parse(localStorage.getItem('users') || '[]');
+        const userIndex = users.findIndex(u => u.id === currentUser.id);
+        
+        if (userIndex !== -1) {
+            users[userIndex].wishlist = wishlist;
+            localStorage.setItem('users', JSON.stringify(users));
+        }
+    }
+}
+
+// Update Wishlist UI
+function updateWishlistUI() {
+    // Update wishlist count if there's a wishlist indicator
+    const wishlistCount = document.getElementById('wishlistCount');
+    if (wishlistCount) {
+        wishlistCount.textContent = wishlist.length;
+        wishlistCount.style.display = wishlist.length > 0 ? 'flex' : 'none';
+    }
 }
 
 // Add to Cart
@@ -549,11 +680,27 @@ function openProductModal(productId) {
                     <span>${product.inStock ? 'Sepete Ekle' : 'Stokta Yok'}</span>
                 </button>
                 
+                <button class="modal-add-to-wishlist ${isInWishlist(product.id) ? 'active' : ''}" onclick="toggleWishlist(${product.id})">
+                    <i class="fas fa-heart"></i>
+                    <span>${isInWishlist(product.id) ? 'Favorilerden Çıkar' : 'Favorilere Ekle'}</span>
+                </button>
+                
                 <div style="display: flex; align-items: center; gap: 0.5rem; margin-top: 1rem;">
                     <div style="width: 12px; height: 12px; border-radius: 50%; background: ${product.inStock ? '#10b981' : '#ef4444'};"></div>
                     <span style="color: ${product.inStock ? '#10b981' : '#ef4444'}; font-weight: 600;">
                         ${product.inStock ? 'Stokta Mevcut' : 'Stokta Yok'}
                     </span>
+                </div>
+                
+                <div class="modal-actions-secondary">
+                    <button class="action-btn-secondary" onclick="shareProduct(${product.id})">
+                        <i class="fas fa-share-alt"></i>
+                        Paylaş
+                    </button>
+                    <button class="action-btn-secondary" onclick="viewReviews(${product.id})">
+                        <i class="fas fa-star"></i>
+                        Yorumları Gör
+                    </button>
                 </div>
             </div>
         </div>
@@ -589,6 +736,31 @@ function addToCartFromModal(productId) {
     const quantity = parseInt(document.getElementById('modalQuantity').textContent);
     addToCart(productId, quantity);
     closeProductModal();
+}
+
+// Share Product
+function shareProduct(productId) {
+    const product = products.find(p => p.id === productId);
+    if (!product) return;
+    
+    if (navigator.share) {
+        navigator.share({
+            title: product.name,
+            text: `${product.name} - ${product.price.toLocaleString('tr-TR')} ₺`,
+            url: window.location.href
+        });
+    } else {
+        // Fallback: copy to clipboard
+        const shareText = `${product.name} - ${product.price.toLocaleString('tr-TR')} ₺ - ${window.location.href}`;
+        navigator.clipboard.writeText(shareText).then(() => {
+            showNotification('Ürün bilgisi kopyalandı!', 'success');
+        });
+    }
+}
+
+// View Reviews
+function viewReviews(productId) {
+    window.location.href = `reviews.html?product=${productId}`;
 }
 
 // Checkout

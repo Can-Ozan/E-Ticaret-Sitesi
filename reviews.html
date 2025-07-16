@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ürün Yorumları - EliteShop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reviews-style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo" onclick="goHome()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>EliteShop</span>
+                </div>
+                
+                <div class="header-actions">
+                    <button class="action-btn" onclick="goHome()">
+                        <i class="fas fa-home"></i>
+                        <span>Ana Sayfa</span>
+                    </button>
+                    <button class="action-btn" id="userBtn">
+                        <i class="fas fa-user"></i>
+                        <span id="userBtnText">Hesabım</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Product Header -->
+            <div class="product-header" id="productHeader">
+                <!-- Product info will be populated by JavaScript -->
+            </div>
+
+            <!-- Reviews Section -->
+            <div class="reviews-wrapper">
+                <!-- Reviews Summary -->
+                <div class="reviews-summary">
+                    <div class="rating-overview">
+                        <div class="overall-rating">
+                            <div class="rating-score" id="overallRating">4.8</div>
+                            <div class="rating-stars" id="overallStars">
+                                <!-- Stars will be populated by JavaScript -->
+                            </div>
+                            <div class="rating-count" id="ratingCount">342 değerlendirme</div>
+                        </div>
+                        
+                        <div class="rating-breakdown">
+                            <div class="rating-bar" data-stars="5">
+                                <span class="star-label">5 <i class="fas fa-star"></i></span>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="width: 68%"></div>
+                                </div>
+                                <span class="bar-count">232</span>
+                            </div>
+                            <div class="rating-bar" data-stars="4">
+                                <span class="star-label">4 <i class="fas fa-star"></i></span>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="width: 22%"></div>
+                                </div>
+                                <span class="bar-count">75</span>
+                            </div>
+                            <div class="rating-bar" data-stars="3">
+                                <span class="star-label">3 <i class="fas fa-star"></i></span>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="width: 7%"></div>
+                                </div>
+                                <span class="bar-count">24</span>
+                            </div>
+                            <div class="rating-bar" data-stars="2">
+                                <span class="star-label">2 <i class="fas fa-star"></i></span>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="width: 2%"></div>
+                                </div>
+                                <span class="bar-count">7</span>
+                            </div>
+                            <div class="rating-bar" data-stars="1">
+                                <span class="star-label">1 <i class="fas fa-star"></i></span>
+                                <div class="bar-container">
+                                    <div class="bar-fill" style="width: 1%"></div>
+                                </div>
+                                <span class="bar-count">4</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="review-highlights">
+                        <h3>Öne Çıkan Özellikler</h3>
+                        <div class="highlights-grid">
+                            <div class="highlight-item">
+                                <i class="fas fa-volume-up"></i>
+                                <div>
+                                    <h4>Ses Kalitesi</h4>
+                                    <div class="highlight-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span>4.9</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-battery-full"></i>
+                                <div>
+                                    <h4>Pil Ömrü</h4>
+                                    <div class="highlight-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star empty"></i>
+                                        </div>
+                                        <span>4.7</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-hand-paper"></i>
+                                <div>
+                                    <h4>Konfor</h4>
+                                    <div class="highlight-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span>4.8</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-dollar-sign"></i>
+                                <div>
+                                    <h4>Fiyat/Performans</h4>
+                                    <div class="highlight-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star empty"></i>
+                                        </div>
+                                        <span>4.6</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reviews Controls -->
+                <div class="reviews-controls">
+                    <div class="controls-left">
+                        <button class="write-review-btn" onclick="openWriteReviewModal()">
+                            <i class="fas fa-edit"></i>
+                            Yorum Yaz
+                        </button>
+                    </div>
+                    
+                    <div class="controls-right">
+                        <select id="reviewSort">
+                            <option value="newest">En Yeni</option>
+                            <option value="oldest">En Eski</option>
+                            <option value="highest">En Yüksek Puan</option>
+                            <option value="lowest">En Düşük Puan</option>
+                            <option value="helpful">En Faydalı</option>
+                        </select>
+                        
+                        <div class="filter-stars">
+                            <button class="star-filter active" data-stars="all">Tümü</button>
+                            <button class="star-filter" data-stars="5">5 ⭐</button>
+                            <button class="star-filter" data-stars="4">4 ⭐</button>
+                            <button class="star-filter" data-stars="3">3 ⭐</button>
+                            <button class="star-filter" data-stars="2">2 ⭐</button>
+                            <button class="star-filter" data-stars="1">1 ⭐</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reviews List -->
+                <div class="reviews-list" id="reviewsList">
+                    <!-- Reviews will be populated by JavaScript -->
+                </div>
+
+                <!-- Load More -->
+                <div class="load-more-container">
+                    <button class="load-more-btn" id="loadMoreBtn">
+                        <i class="fas fa-chevron-down"></i>
+                        Daha Fazla Yorum Göster
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Write Review Modal -->
+    <div class="modal-overlay" id="writeReviewModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Yorum Yazın</h3>
+                <button class="modal-close" onclick="closeWriteReviewModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="reviewForm">
+                    <div class="form-group">
+                        <label>Puanınız *</label>
+                        <div class="rating-input" id="ratingInput">
+                            <i class="fas fa-star" data-rating="1"></i>
+                            <i class="fas fa-star" data-rating="2"></i>
+                            <i class="fas fa-star" data-rating="3"></i>
+                            <i class="fas fa-star" data-rating="4"></i>
+                            <i class="fas fa-star" data-rating="5"></i>
+                        </div>
+                        <span class="rating-text" id="ratingText">Puan verin</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reviewTitle">Başlık *</label>
+                        <input type="text" id="reviewTitle" name="title" required placeholder="Yorumunuz için bir başlık yazın">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reviewText">Yorumunuz *</label>
+                        <textarea id="reviewText" name="text" required rows="5" placeholder="Ürün hakkındaki deneyiminizi paylaşın..."></textarea>
+                        <div class="char-count">
+                            <span id="charCount">0</span>/500 karakter
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Ürün Özellikleri</label>
+                        <div class="feature-ratings">
+                            <div class="feature-rating">
+                                <span>Ses Kalitesi</span>
+                                <div class="feature-stars" data-feature="sound">
+                                    <i class="fas fa-star" data-rating="1"></i>
+                                    <i class="fas fa-star" data-rating="2"></i>
+                                    <i class="fas fa-star" data-rating="3"></i>
+                                    <i class="fas fa-star" data-rating="4"></i>
+                                    <i class="fas fa-star" data-rating="5"></i>
+                                </div>
+                            </div>
+                            <div class="feature-rating">
+                                <span>Pil Ömrü</span>
+                                <div class="feature-stars" data-feature="battery">
+                                    <i class="fas fa-star" data-rating="1"></i>
+                                    <i class="fas fa-star" data-rating="2"></i>
+                                    <i class="fas fa-star" data-rating="3"></i>
+                                    <i class="fas fa-star" data-rating="4"></i>
+                                    <i class="fas fa-star" data-rating="5"></i>
+                                </div>
+                            </div>
+                            <div class="feature-rating">
+                                <span>Konfor</span>
+                                <div class="feature-stars" data-feature="comfort">
+                                    <i class="fas fa-star" data-rating="1"></i>
+                                    <i class="fas fa-star" data-rating="2"></i>
+                                    <i class="fas fa-star" data-rating="3"></i>
+                                    <i class="fas fa-star" data-rating="4"></i>
+                                    <i class="fas fa-star" data-rating="5"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="recommendProduct">
+                            <span class="checkmark"></span>
+                            Bu ürünü başkalarına tavsiye ederim
+                        </label>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" onclick="closeWriteReviewModal()">İptal</button>
+                        <button type="submit" class="btn-primary">Yorumu Gönder</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div class="modal-overlay" id="imageModal">
+        <div class="modal-content image-modal">
+            <button class="modal-close" onclick="closeImageModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="image-container">
+                <img id="modalImage" src="" alt="">
+                <div class="image-nav">
+                    <button class="nav-btn prev" onclick="prevImage()">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="nav-btn next" onclick="nextImage()">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="reviews-script.js"></script>
+</body>
+</html>
