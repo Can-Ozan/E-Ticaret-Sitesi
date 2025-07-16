@@ -8,7 +8,7 @@
 </div>
 
 <div align="center">
-  <h3>🚀 Vanilla JavaScript ile Geliştirilmiş Profesyonel E-Ticaret Platformu</h3>
+  <h3>🚀 Vanilla JavaScript ile Geliştirilmiş Tam Özellikli E-Ticaret Platformu</h3>
   <p><em>Hiçbir framework veya build tool gerektirmez - Sadece tarayıcıda açın ve kullanın!</em></p>
 </div>
 
@@ -22,11 +22,34 @@
 - Gelişmiş arama ve filtreleme sistemi
 - Responsive ürün grid'i
 
+### 👤 Kullanıcı Sistemi
+- Güvenli giriş/kayıt sistemi
+- Kullanıcı profil yönetimi
+- Sosyal medya entegrasyonu
+- Oturum yönetimi
+
 ### 💳 Ödeme Sayfası
 - Profesyonel checkout süreci
 - Çoklu ödeme yöntemleri
 - Gerçek zamanlı form validasyonu
-- Detaylı sipariş özeti
+- 81 il desteği ile detaylı adres sistemi
+
+### ❤️ Favoriler Sistemi
+- Kişisel wishlist yönetimi
+- Fiyat değişim takibi
+- Paylaşım özellikleri
+- Grid/List görünüm seçenekleri
+
+### ⭐ Yorum Sistemi
+- 5 yıldızlı değerlendirme
+- Detaylı özellik puanlaması
+- Görsel yorum desteği
+- Faydalı/Faydalı değil oylaması
+
+### 🌍 Çoklu Dil Desteği
+- 4 dil: Türkçe, İngilizce, Almanca, Fransızca
+- Dinamik dil değiştirme
+- Para birimi ve tarih formatlaması
 
 ---
 
@@ -38,6 +61,7 @@
 - ✅ Çoklu ürün görselleri
 - ✅ Yıldız rating sistemi
 - ✅ İndirim rozetleri ve fiyat hesaplama
+- ✅ Stok durumu takibi
 
 ### 🛒 **Sepet Sistemi**
 - ✅ Dinamik sepet sidebar'ı
@@ -53,16 +77,49 @@
 - ✅ Rating ve alfabetik sıralama
 - ✅ Ürün sayısı gösterimi
 
+### 👤 **Kullanıcı Hesap Sistemi**
+- ✅ **Güvenli Giriş/Kayıt**: E-posta ve şifre ile
+- ✅ **Profil Yönetimi**: Kişisel bilgiler, adresler
+- ✅ **Sosyal Medya**: Google ve Facebook entegrasyonu
+- ✅ **Oturum Yönetimi**: "Beni hatırla" özelliği
+- ✅ **Kullanıcı Dropdown**: Hızlı erişim menüsü
+
+### ❤️ **Wishlist (Favoriler) Sistemi**
+- ✅ **Kişisel Favoriler**: Ürünleri favorilere ekleme/çıkarma
+- ✅ **Fiyat Takibi**: Fiyat değişimlerini izleme
+- ✅ **Görünüm Seçenekleri**: Grid ve List görünümü
+- ✅ **Paylaşım**: Sosyal medyada paylaşım
+- ✅ **Öneriler**: Kişiselleştirilmiş ürün önerileri
+- ✅ **Arama & Sıralama**: Favoriler içinde arama
+
+### ⭐ **Yorum & Değerlendirme Sistemi**
+- ✅ **5 Yıldız Sistemi**: Genel ürün puanlaması
+- ✅ **Özellik Puanları**: Ses, pil, konfor gibi detaylar
+- ✅ **Yorum Yazma**: Kapsamlı yorum formu
+- ✅ **Görsel Yorumlar**: Fotoğraf ekleme desteği
+- ✅ **Faydalı Oylaması**: Yorumları değerlendirme
+- ✅ **Filtreleme**: Puan ve tarih bazlı sıralama
+- ✅ **Doğrulanmış Alıcı**: Güvenilir yorumlar
+
+### 🌍 **Çoklu Dil Desteği**
+- ✅ **4 Dil**: Türkçe, İngilizce, Almanca, Fransızca
+- ✅ **Dinamik Değişim**: Sayfa yenilenmeden dil değiştirme
+- ✅ **Para Birimi**: Dile göre otomatik formatlaması
+- ✅ **Tarih Format**: Yerel tarih formatları
+- ✅ **Tercih Kaydetme**: LocalStorage ile dil tercihi
+
 ### 💰 **Ödeme Sistemi**
 - ✅ **3 Ödeme Yöntemi**: Kredi kartı, Havale/EFT, Kapıda ödeme
 - ✅ **Teslimat Seçenekleri**: Standart, Hızlı, Aynı gün
 - ✅ **81 İl Desteği**: Türkiye'nin tüm illeri
 - ✅ **İndirim Kodları**: WELCOME10, SAVE50, FREESHIP
 - ✅ **KDV Hesaplama**: %20 KDV ayrı gösterimi
+- ✅ **Gelişmiş Hata Yönetimi**: Detaylı hata mesajları ve çözümler
 
 ### 🛡️ **Güvenlik & Validasyon**
 - ✅ Gerçek zamanlı form validasyonu
 - ✅ Luhn algoritması ile kart doğrulama
+- ✅ XSS koruması ve güvenli veri işleme
 - ✅ Hata mesajları ve çözüm önerileri
 - ✅ Güvenlik rozetleri ve SSL gösterimi
 
@@ -71,6 +128,7 @@
 - ✅ Tablet ve desktop uyumluluğu
 - ✅ Touch-friendly arayüz
 - ✅ Flexible grid sistemi
+- ✅ Accessibility desteği
 
 ---
 
@@ -107,11 +165,21 @@ code .
 ```
 eliteshop/
 ├── 📄 index.html              # Ana sayfa
+├── 📄 auth.html               # Giriş/Kayıt sayfası
 ├── 📄 payment.html            # Ödeme sayfası
+├── 📄 wishlist.html           # Favoriler sayfası
+├── 📄 reviews.html            # Yorumlar sayfası
 ├── 🎨 styles.css              # Ana sayfa stilleri
+├── 🎨 auth-styles.css         # Giriş/Kayıt stilleri
 ├── 🎨 payment-styles.css      # Ödeme sayfası stilleri
+├── 🎨 wishlist-styles.css     # Favoriler stilleri
+├── 🎨 reviews-styles.css      # Yorumlar stilleri
 ├── ⚡ script.js               # Ana sayfa JavaScript
+├── ⚡ auth-script.js          # Giriş/Kayıt JavaScript
 ├── ⚡ payment-script.js       # Ödeme sayfası JavaScript
+├── ⚡ wishlist-script.js      # Favoriler JavaScript
+├── ⚡ reviews-script.js       # Yorumlar JavaScript
+├── 🌍 language.js             # Çoklu dil sistemi
 └── 📖 README.md               # Bu dosya
 ```
 
@@ -119,11 +187,29 @@ eliteshop/
 
 ## 🎯 Kullanım Kılavuzu
 
+### 👤 **Hesap İşlemleri**
+1. "Hesabım" butonuna tıklayın
+2. Yeni kullanıcıysanız "Kayıt Ol" seçin
+3. Bilgilerinizi doldurup hesap oluşturun
+4. Giriş yaparak kişisel özelliklerden yararlanın
+
 ### 🛍️ **Alışveriş Yapma**
 1. Ana sayfada kategorileri inceleyin
 2. Ürünlere tıklayarak detayları görün
 3. "Sepete Ekle" ile ürünleri sepete atın
 4. Sepet simgesine tıklayarak sepeti kontrol edin
+
+### ❤️ **Favoriler Kullanımı**
+1. Ürün kartlarındaki kalp ikonuna tıklayın
+2. "Favoriler" sayfasından listelerinizi yönetin
+3. Fiyat değişimlerini takip edin
+4. Favorilerinizi sosyal medyada paylaşın
+
+### ⭐ **Yorum Yazma**
+1. Ürün detayında "Yorumları Gör" butonuna tıklayın
+2. "Yorum Yaz" butonuna tıklayın
+3. Puanınızı verin ve deneyiminizi paylaşın
+4. Özellik puanlarını da değerlendirin
 
 ### 💳 **Ödeme Süreci**
 1. Sepette "Ödemeye Geç" butonuna tıklayın
@@ -131,26 +217,46 @@ eliteshop/
 3. Ödeme yöntemini seçin
 4. "Siparişi Tamamla" ile işlemi bitirin
 
+### 🌍 **Dil Değiştirme**
+1. Header'daki dil seçicisine tıklayın
+2. İstediğiniz dili seçin
+3. Sayfa otomatik olarak güncellenir
+4. Tercihınız otomatik kaydedilir
+
+### 🎁 **İndirim Kodları**
+- `WELCOME10` - %10 indirim
+- `SAVE50` - 50₺ sabit indirim
+- `FREESHIP` - Ücretsiz kargo
+
 ---
 
 ## 🛠️ Teknik Detaylar
 
 ### 💾 **Veri Yönetimi**
-- **LocalStorage** ile sepet ve sipariş verisi
+- **LocalStorage** ile sepet, favoriler ve kullanıcı verisi
 - **JSON** formatında ürün bilgileri
 - **Client-side** veri işleme
+- **Güvenli veri saklama** ve şifreleme
 
 ### 🎨 **Tasarım Sistemi**
 - **CSS Grid & Flexbox** layout
 - **8px spacing** sistemi
 - **Consistent color palette**
 - **Smooth animations** ve transitions
+- **Apple-level design** aesthetics
 
 ### ⚡ **Performance**
 - **Vanilla JavaScript** - framework yükü yok
 - **Optimized images** - Pexels CDN
 - **Minimal CSS** - sadece gerekli stiller
-- **Fast loading** - tek sayfa uygulaması
+- **Fast loading** - optimized rendering
+- **Lazy loading** - performans odaklı
+
+### 🔒 **Güvenlik**
+- **XSS koruması** - güvenli veri işleme
+- **Form validasyonu** - client-side doğrulama
+- **Luhn algoritması** - kart numarası doğrulama
+- **Güvenli oturum** yönetimi
 
 ---
 
@@ -168,6 +274,11 @@ eliteshop/
 - 89₺ - 2.499₺ arası ürünler
 - İndirimli fiyat gösterimleri
 - KDV dahil/hariç hesaplamalar
+
+### 👥 **Demo Kullanıcıları**
+- Test hesapları ile hızlı giriş
+- Örnek yorumlar ve değerlendirmeler
+- Gerçekçi kullanıcı deneyimi
 
 ---
 
@@ -194,6 +305,15 @@ eliteshop/
     category: 'electronics',
     description: 'Ürün açıklaması...',
     // ... diğer özellikler
+}
+```
+
+### 🌍 **Yeni Dil Ekleme**
+```javascript
+// language.js içinde translations objesine ekleyin
+es: {
+    'header.search.placeholder': 'Buscar productos...',
+    // ... diğer çeviriler
 }
 ```
 
@@ -232,14 +352,23 @@ Bu proje **MIT Lisansı** altında lisanslanmıştır. Detaylar için [LICENSE](
 
 ## 🔄 Güncellemeler
 
-### v1.0.0 (2024)
-- ✅ İlk sürüm yayınlandı
-- ✅ Temel e-ticaret özellikleri
-- ✅ Responsive tasarım
-- ✅ Ödeme sistemi entegrasyonu
+### v2.0.0 (2024) - Büyük Güncelleme ✨
+- ✅ **Kullanıcı hesap sistemi** - Tam özellikli giriş/kayıt
+- ✅ **Wishlist sistemi** - Favoriler yönetimi
+- ✅ **Yorum sistemi** - 5 yıldızlı değerlendirme
+- ✅ **Çoklu dil desteği** - 4 dil seçeneği
+- ✅ **Gelişmiş ödeme** - 81 il desteği ve hata yönetimi
+- ✅ **Responsive tasarım** - Tüm cihazlarda mükemmel görünüm
 
-### Gelecek Güncellemeler
-- 🔄 Kullanıcı hesap sistemi
-- 🔄 Ürün yorumları
-- 🔄 Wishlist özelliği
-- 🔄 Çoklu dil desteği
+### v1.0.0 (2024) - İlk Sürüm
+- ✅ Temel e-ticaret özellikleri
+- ✅ Sepet sistemi
+- ✅ Ürün katalogu
+- ✅ Ödeme sistemi
+
+### Gelecek Planlar 🚀
+- 🔄 Admin paneli
+- 🔄 Sipariş takip sistemi
+- 🔄 Canlı destek chat
+- 🔄 Push notification desteği
+- 🔄 PWA (Progressive Web App) desteği
