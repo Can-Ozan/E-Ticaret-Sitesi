@@ -25,11 +25,11 @@
                 <div class="header-actions">
                     <button class="action-btn">
                         <i class="fas fa-user"></i>
-                        <span>Hesabım</span>
+                        <span data-translate="header.account">Hesabım</span>
                     </button>
                     <button class="action-btn">
                         <i class="fas fa-heart"></i>
-                        <span>Favoriler</span>
+                        <span data-translate="header.favorites">Favoriler</span>
                     </button>
                     <div class="language-selector">
                         <button class="language-btn" onclick="toggleLanguageDropdown()">
@@ -43,7 +43,7 @@
                     </div>
                     <button class="action-btn cart-btn" onclick="toggleCart()">
                         <i class="fas fa-shopping-cart"></i>
-                        <span>Sepet</span>
+                        <span data-translate="header.cart">Sepet</span>
                         <span class="cart-count" id="cartCount">0</span>
                     </button>
                 </div>
@@ -55,11 +55,11 @@
     <section class="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <h1>Premium <span class="highlight">Alışveriş</span> Deneyimi</h1>
-                <p>En kaliteli ürünler, en uygun fiyatlar ve hızlı teslimat ile mükemmel alışveriş deneyimi yaşayın.</p>
+                <h1 data-translate="hero.title">Premium <span class="highlight">Alışveriş</span> Deneyimi</h1>
+                <p data-translate="hero.subtitle">En kaliteli ürünler, en uygun fiyatlar ve hızlı teslimat ile mükemmel alışveriş deneyimi yaşayın.</p>
                 <div class="hero-buttons">
-                    <button class="btn-primary">Alışverişe Başla</button>
-                    <button class="btn-secondary">Kategorileri İncele</button>
+                    <button class="btn-primary" data-translate="hero.cta.shop">Alışverişe Başla</button>
+                    <button class="btn-secondary" data-translate="hero.cta.categories">Kategorileri İncele</button>
                 </div>
             </div>
             <div class="hero-image">
@@ -71,22 +71,22 @@
             <div class="feature">
                 <i class="fas fa-truck"></i>
                 <div>
-                    <h3>Ücretsiz Kargo</h3>
-                    <p>250₺ üzeri siparişlerde</p>
+                    <h3 data-translate="feature.shipping.title">Ücretsiz Kargo</h3>
+                    <p data-translate="feature.shipping.desc">250₺ üzeri siparişlerde</p>
                 </div>
             </div>
             <div class="feature">
                 <i class="fas fa-shield-alt"></i>
                 <div>
-                    <h3>Güvenli Ödeme</h3>
-                    <p>256-bit SSL koruması</p>
+                    <h3 data-translate="feature.security.title">Güvenli Ödeme</h3>
+                    <p data-translate="feature.security.desc">256-bit SSL koruması</p>
                 </div>
             </div>
             <div class="feature">
                 <i class="fas fa-star"></i>
                 <div>
-                    <h3>Premium Kalite</h3>
-                    <p>Seçkin ürün koleksiyonu</p>
+                    <h3 data-translate="feature.quality.title">Premium Kalite</h3>
+                    <p data-translate="feature.quality.desc">Seçkin ürün koleksiyonu</p>
                 </div>
             </div>
         </div>
@@ -99,7 +99,7 @@
                 <!-- Sidebar -->
                 <aside class="sidebar">
                     <div class="filter-section">
-                        <h3>Kategoriler</h3>
+                        <h3 data-translate="nav.categories">Kategoriler</h3>
                         <div class="category-list" id="categoryList">
                             <!-- Categories will be populated by JavaScript -->
                         </div>
@@ -114,11 +114,11 @@
                         </div>
                         <div class="products-controls">
                             <select id="sortSelect">
-                                <option value="featured">Öne Çıkanlar</option>
-                                <option value="price-low">Fiyat: Düşükten Yükseğe</option>
-                                <option value="price-high">Fiyat: Yüksekten Düşüğe</option>
-                                <option value="rating">En Yüksek Puan</option>
-                                <option value="name">İsim: A-Z</option>
+                                <option value="featured" data-translate="sort.featured">Öne Çıkanlar</option>
+                                <option value="price-low" data-translate="sort.price.low">Fiyat: Düşükten Yükseğe</option>
+                                <option value="price-high" data-translate="sort.price.high">Fiyat: Yüksekten Düşüğe</option>
+                                <option value="rating" data-translate="sort.rating">En Yüksek Puan</option>
+                                <option value="name" data-translate="sort.name">İsim: A-Z</option>
                             </select>
                         </div>
                     </div>
@@ -135,7 +135,7 @@
     <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
     <div class="cart-sidebar" id="cartSidebar">
         <div class="cart-header">
-            <h2>Sepetim</h2>
+            <h2 data-translate="cart.title">Sepetim</h2>
             <button class="close-btn" onclick="toggleCart()">
                 <i class="fas fa-times"></i>
             </button>

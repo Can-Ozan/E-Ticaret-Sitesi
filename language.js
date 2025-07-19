@@ -45,6 +45,8 @@ class LanguageManager {
                 'category.sports': 'Spor & Outdoor',
                 'category.books': 'Kitap & Medya',
                 'category.beauty': 'Güzellik & Bakım',
+                'category.automotive': 'Otomotiv',
+                'category.toys': 'Oyuncak & Hobi',
                 
                 // Products
                 'product.add.cart': 'Sepete Ekle',
@@ -92,6 +94,7 @@ class LanguageManager {
                 'payment.order.summary': 'Sipariş Özeti',
                 'payment.complete': 'Siparişi Tamamla',
                 'payment.success': 'Siparişiniz Alındı!',
+                'payment.cards.accepted': 'Kabul Edilen Kartlar:',
                 
                 // Wishlist
                 'wishlist.title': 'Favorilerim',
@@ -172,6 +175,8 @@ class LanguageManager {
                 'category.sports': 'Sports & Outdoor',
                 'category.books': 'Books & Media',
                 'category.beauty': 'Beauty & Care',
+                'category.automotive': 'Automotive',
+                'category.toys': 'Toys & Hobbies',
                 
                 // Products
                 'product.add.cart': 'Add to Cart',
@@ -219,6 +224,7 @@ class LanguageManager {
                 'payment.order.summary': 'Order Summary',
                 'payment.complete': 'Complete Order',
                 'payment.success': 'Order Received!',
+                'payment.cards.accepted': 'Accepted Cards:',
                 
                 // Wishlist
                 'wishlist.title': 'My Favorites',
@@ -299,6 +305,8 @@ class LanguageManager {
                 'category.sports': 'Sport & Outdoor',
                 'category.books': 'Bücher & Medien',
                 'category.beauty': 'Schönheit & Pflege',
+                'category.automotive': 'Automobil',
+                'category.toys': 'Spielzeug & Hobbys',
                 
                 // Products
                 'product.add.cart': 'In den Warenkorb',
@@ -322,6 +330,60 @@ class LanguageManager {
                 'cart.total': 'Gesamt:',
                 'cart.checkout': 'Zur Kasse',
                 'cart.added': 'Produkt zum Warenkorb hinzugefügt!',
+                
+                // Auth
+                'auth.login': 'Anmelden',
+                'auth.register': 'Registrieren',
+                'auth.email': 'E-Mail',
+                'auth.password': 'Passwort',
+                'auth.remember': 'Angemeldet bleiben',
+                'auth.forgot': 'Passwort vergessen',
+                'auth.firstname': 'Vorname',
+                'auth.lastname': 'Nachname',
+                'auth.phone': 'Telefon',
+                'auth.birthdate': 'Geburtsdatum',
+                'auth.gender': 'Geschlecht',
+                'auth.terms': 'Nutzungsbedingungen',
+                'auth.privacy': 'Datenschutzrichtlinie',
+                'auth.marketing': 'Ich möchte über Kampagnen und Angebote informiert werden',
+                
+                // Payment
+                'payment.title': 'Zahlung',
+                'payment.delivery.info': 'Lieferinformationen',
+                'payment.payment.info': 'Zahlungsinformationen',
+                'payment.order.summary': 'Bestellübersicht',
+                'payment.complete': 'Bestellung abschließen',
+                'payment.success': 'Bestellung erhalten!',
+                'payment.cards.accepted': 'Akzeptierte Karten:',
+                
+                // Wishlist
+                'wishlist.title': 'Meine Favoriten',
+                'wishlist.empty': 'Ihre Wunschliste ist leer',
+                'wishlist.added': 'Produkt zu Favoriten hinzugefügt!',
+                'wishlist.removed': 'Produkt aus Favoriten entfernt',
+                
+                // Reviews
+                'reviews.title': 'Produktbewertungen',
+                'reviews.write': 'Bewertung schreiben',
+                'reviews.helpful': 'Hilfreich',
+                'reviews.not.helpful': 'Nicht hilfreich',
+                'reviews.recommend': 'Empfiehlt dieses Produkt',
+                
+                // Footer
+                'footer.about': 'Über uns',
+                'footer.contact': 'Kontakt',
+                'footer.shipping': 'Versand & Lieferung',
+                'footer.returns': 'Rücksendungen & Umtausch',
+                'footer.privacy': 'Datenschutzrichtlinie',
+                'footer.rights': 'Alle Rechte vorbehalten.',
+                
+                // Notifications
+                'notification.login.required': 'Sie müssen sich für diese Aktion anmelden',
+                'notification.login.success': 'Anmeldung erfolgreich!',
+                'notification.register.success': 'Registrierung erfolgreich!',
+                'notification.logout.success': 'Erfolgreich abgemeldet',
+                'notification.error': 'Ein Fehler ist aufgetreten',
+                'notification.success': 'Vorgang erfolgreich',
                 
                 // Common
                 'common.loading': 'Laden...',
@@ -373,6 +435,8 @@ class LanguageManager {
                 'category.sports': 'Sport & Plein air',
                 'category.books': 'Livres & Médias',
                 'category.beauty': 'Beauté & Soins',
+                'category.automotive': 'Automobile',
+                'category.toys': 'Jouets & Loisirs',
                 
                 // Products
                 'product.add.cart': 'Ajouter au panier',
@@ -397,6 +461,60 @@ class LanguageManager {
                 'cart.checkout': 'Commander',
                 'cart.added': 'Produit ajouté au panier!',
                 
+                // Auth
+                'auth.login': 'Se connecter',
+                'auth.register': 'S\'inscrire',
+                'auth.email': 'E-mail',
+                'auth.password': 'Mot de passe',
+                'auth.remember': 'Se souvenir de moi',
+                'auth.forgot': 'Mot de passe oublié',
+                'auth.firstname': 'Prénom',
+                'auth.lastname': 'Nom',
+                'auth.phone': 'Téléphone',
+                'auth.birthdate': 'Date de naissance',
+                'auth.gender': 'Genre',
+                'auth.terms': 'Conditions d\'utilisation',
+                'auth.privacy': 'Politique de confidentialité',
+                'auth.marketing': 'Je veux être informé des campagnes et opportunités',
+                
+                // Payment
+                'payment.title': 'Paiement',
+                'payment.delivery.info': 'Informations de livraison',
+                'payment.payment.info': 'Informations de paiement',
+                'payment.order.summary': 'Résumé de commande',
+                'payment.complete': 'Finaliser la commande',
+                'payment.success': 'Commande reçue!',
+                'payment.cards.accepted': 'Cartes acceptées:',
+                
+                // Wishlist
+                'wishlist.title': 'Mes Favoris',
+                'wishlist.empty': 'Votre liste de souhaits est vide',
+                'wishlist.added': 'Produit ajouté aux favoris!',
+                'wishlist.removed': 'Produit retiré des favoris',
+                
+                // Reviews
+                'reviews.title': 'Avis sur le produit',
+                'reviews.write': 'Écrire un avis',
+                'reviews.helpful': 'Utile',
+                'reviews.not.helpful': 'Pas utile',
+                'reviews.recommend': 'Recommande ce produit',
+                
+                // Footer
+                'footer.about': 'À propos',
+                'footer.contact': 'Contact',
+                'footer.shipping': 'Expédition & Livraison',
+                'footer.returns': 'Retours & Échange',
+                'footer.privacy': 'Politique de confidentialité',
+                'footer.rights': 'Tous droits réservés.',
+                
+                // Notifications
+                'notification.login.required': 'Vous devez vous connecter pour cette action',
+                'notification.login.success': 'Connexion réussie!',
+                'notification.register.success': 'Inscription réussie!',
+                'notification.logout.success': 'Déconnexion réussie',
+                'notification.error': 'Une erreur s\'est produite',
+                'notification.success': 'Opération réussie',
+                
                 // Common
                 'common.loading': 'Chargement...',
                 'common.save': 'Enregistrer',
@@ -409,6 +527,265 @@ class LanguageManager {
                 'common.search': 'Rechercher',
                 'common.filter': 'Filtrer',
                 'common.clear': 'Effacer'
+            },
+
+            es: {
+                // Header
+                'header.search.placeholder': 'Buscar productos, categorías o marcas...',
+                'header.account': 'Mi Cuenta',
+                'header.favorites': 'Favoritos',
+                'header.cart': 'Carrito',
+                'header.login': 'Iniciar Sesión',
+                
+                // Navigation
+                'nav.home': 'Inicio',
+                'nav.categories': 'Categorías',
+                'nav.deals': 'Ofertas',
+                'nav.contact': 'Contacto',
+                
+                // Hero Section
+                'hero.title': 'Experiencia de <span class="highlight">Compras</span> Premium',
+                'hero.subtitle': 'Vive una experiencia de compra perfecta con productos de la más alta calidad, mejores precios y entrega rápida.',
+                'hero.cta.shop': 'Comenzar a Comprar',
+                'hero.cta.categories': 'Explorar Categorías',
+                
+                // Features
+                'feature.shipping.title': 'Envío Gratis',
+                'feature.shipping.desc': 'En pedidos superiores a 25€',
+                'feature.security.title': 'Pago Seguro',
+                'feature.security.desc': 'Protección SSL de 256 bits',
+                'feature.quality.title': 'Calidad Premium',
+                'feature.quality.desc': 'Colección de productos seleccionados',
+                
+                // Categories
+                'category.all': 'Todos los Productos',
+                'category.electronics': 'Electrónicos',
+                'category.fashion': 'Moda y Ropa',
+                'category.home': 'Hogar y Vida',
+                'category.sports': 'Deportes y Aire Libre',
+                'category.books': 'Libros y Medios',
+                'category.beauty': 'Belleza y Cuidado',
+                'category.automotive': 'Automotriz',
+                'category.toys': 'Juguetes y Pasatiempos',
+                
+                // Products
+                'product.add.cart': 'Añadir al Carrito',
+                'product.out.stock': 'Agotado',
+                'product.reviews': 'reseñas',
+                'product.found': 'productos encontrados',
+                'product.no.found': 'No se encontraron productos',
+                'product.search.again': 'Intenta cambiar tus criterios de búsqueda.',
+                
+                // Sort Options
+                'sort.featured': 'Destacados',
+                'sort.price.low': 'Precio: Bajo a Alto',
+                'sort.price.high': 'Precio: Alto a Bajo',
+                'sort.rating': 'Mejor Valorado',
+                'sort.name': 'Nombre: A-Z',
+                
+                // Cart
+                'cart.title': 'Mi Carrito',
+                'cart.empty': 'Tu carrito está vacío',
+                'cart.empty.desc': 'Añade productos para comenzar a comprar',
+                'cart.total': 'Total:',
+                'cart.checkout': 'Finalizar Compra',
+                'cart.added': '¡Producto añadido al carrito!',
+                
+                // Common
+                'common.loading': 'Cargando...',
+                'common.save': 'Guardar',
+                'common.cancel': 'Cancelar',
+                'common.delete': 'Eliminar',
+                'common.edit': 'Editar',
+                'common.close': 'Cerrar',
+                'common.yes': 'Sí',
+                'common.no': 'No',
+                'common.search': 'Buscar',
+                'common.filter': 'Filtrar',
+                'common.clear': 'Limpiar'
+            },
+
+            it: {
+                // Header
+                'header.search.placeholder': 'Cerca prodotti, categorie o marchi...',
+                'header.account': 'Il Mio Account',
+                'header.favorites': 'Preferiti',
+                'header.cart': 'Carrello',
+                'header.login': 'Accedi',
+                
+                // Navigation
+                'nav.home': 'Home',
+                'nav.categories': 'Categorie',
+                'nav.deals': 'Offerte',
+                'nav.contact': 'Contatto',
+                
+                // Hero Section
+                'hero.title': 'Esperienza di <span class="highlight">Shopping</span> Premium',
+                'hero.subtitle': 'Vivi un\'esperienza di shopping perfetta con prodotti di altissima qualità, prezzi migliori e consegna veloce.',
+                'hero.cta.shop': 'Inizia a Comprare',
+                'hero.cta.categories': 'Esplora Categorie',
+                
+                // Features
+                'feature.shipping.title': 'Spedizione Gratuita',
+                'feature.shipping.desc': 'Su ordini superiori a 25€',
+                'feature.security.title': 'Pagamento Sicuro',
+                'feature.security.desc': 'Protezione SSL a 256 bit',
+                'feature.quality.title': 'Qualità Premium',
+                'feature.quality.desc': 'Collezione di prodotti selezionati',
+                
+                // Categories
+                'category.all': 'Tutti i Prodotti',
+                'category.electronics': 'Elettronica',
+                'category.fashion': 'Moda e Abbigliamento',
+                'category.home': 'Casa e Vita',
+                'category.sports': 'Sport e Outdoor',
+                'category.books': 'Libri e Media',
+                'category.beauty': 'Bellezza e Cura',
+                'category.automotive': 'Automotive',
+                'category.toys': 'Giocattoli e Hobby',
+                
+                // Products
+                'product.add.cart': 'Aggiungi al Carrello',
+                'product.out.stock': 'Esaurito',
+                'product.reviews': 'recensioni',
+                'product.found': 'prodotti trovati',
+                'product.no.found': 'Nessun prodotto trovato',
+                'product.search.again': 'Prova a cambiare i tuoi criteri di ricerca.',
+                
+                // Common
+                'common.loading': 'Caricamento...',
+                'common.save': 'Salva',
+                'common.cancel': 'Annulla',
+                'common.delete': 'Elimina',
+                'common.edit': 'Modifica',
+                'common.close': 'Chiudi',
+                'common.yes': 'Sì',
+                'common.no': 'No',
+                'common.search': 'Cerca',
+                'common.filter': 'Filtra',
+                'common.clear': 'Pulisci'
+            },
+
+            ru: {
+                // Header
+                'header.search.placeholder': 'Поиск товаров, категорий или брендов...',
+                'header.account': 'Мой Аккаунт',
+                'header.favorites': 'Избранное',
+                'header.cart': 'Корзина',
+                'header.login': 'Войти',
+                
+                // Navigation
+                'nav.home': 'Главная',
+                'nav.categories': 'Категории',
+                'nav.deals': 'Предложения',
+                'nav.contact': 'Контакты',
+                
+                // Hero Section
+                'hero.title': 'Премиум <span class="highlight">Покупки</span> Опыт',
+                'hero.subtitle': 'Испытайте идеальный шоппинг с продуктами высочайшего качества, лучшими ценами и быстрой доставкой.',
+                'hero.cta.shop': 'Начать Покупки',
+                'hero.cta.categories': 'Просмотреть Категории',
+                
+                // Features
+                'feature.shipping.title': 'Бесплатная Доставка',
+                'feature.shipping.desc': 'При заказах свыше 25€',
+                'feature.security.title': 'Безопасная Оплата',
+                'feature.security.desc': '256-битная SSL защита',
+                'feature.quality.title': 'Премиум Качество',
+                'feature.quality.desc': 'Отобранная коллекция товаров',
+                
+                // Categories
+                'category.all': 'Все Товары',
+                'category.electronics': 'Электроника',
+                'category.fashion': 'Мода и Одежда',
+                'category.home': 'Дом и Жизнь',
+                'category.sports': 'Спорт и Отдых',
+                'category.books': 'Книги и Медиа',
+                'category.beauty': 'Красота и Уход',
+                'category.automotive': 'Автомобили',
+                'category.toys': 'Игрушки и Хобби',
+                
+                // Products
+                'product.add.cart': 'Добавить в Корзину',
+                'product.out.stock': 'Нет в Наличии',
+                'product.reviews': 'отзывов',
+                'product.found': 'товаров найдено',
+                'product.no.found': 'Товары не найдены',
+                'product.search.again': 'Попробуйте изменить критерии поиска.',
+                
+                // Common
+                'common.loading': 'Загрузка...',
+                'common.save': 'Сохранить',
+                'common.cancel': 'Отмена',
+                'common.delete': 'Удалить',
+                'common.edit': 'Редактировать',
+                'common.close': 'Закрыть',
+                'common.yes': 'Да',
+                'common.no': 'Нет',
+                'common.search': 'Поиск',
+                'common.filter': 'Фильтр',
+                'common.clear': 'Очистить'
+            },
+
+            ar: {
+                // Header
+                'header.search.placeholder': 'البحث عن المنتجات والفئات والعلامات التجارية...',
+                'header.account': 'حسابي',
+                'header.favorites': 'المفضلة',
+                'header.cart': 'السلة',
+                'header.login': 'تسجيل الدخول',
+                
+                // Navigation
+                'nav.home': 'الرئيسية',
+                'nav.categories': 'الفئات',
+                'nav.deals': 'العروض',
+                'nav.contact': 'اتصل بنا',
+                
+                // Hero Section
+                'hero.title': 'تجربة <span class="highlight">تسوق</span> مميزة',
+                'hero.subtitle': 'استمتع بتجربة تسوق مثالية مع منتجات عالية الجودة وأفضل الأسعار والتوصيل السريع.',
+                'hero.cta.shop': 'ابدأ التسوق',
+                'hero.cta.categories': 'تصفح الفئات',
+                
+                // Features
+                'feature.shipping.title': 'شحن مجاني',
+                'feature.shipping.desc': 'على الطلبات فوق 25€',
+                'feature.security.title': 'دفع آمن',
+                'feature.security.desc': 'حماية SSL 256-bit',
+                'feature.quality.title': 'جودة مميزة',
+                'feature.quality.desc': 'مجموعة منتجات منتقاة',
+                
+                // Categories
+                'category.all': 'جميع المنتجات',
+                'category.electronics': 'الإلكترونيات',
+                'category.fashion': 'الأزياء والملابس',
+                'category.home': 'المنزل والحياة',
+                'category.sports': 'الرياضة والهواء الطلق',
+                'category.books': 'الكتب والوسائط',
+                'category.beauty': 'الجمال والعناية',
+                'category.automotive': 'السيارات',
+                'category.toys': 'الألعاب والهوايات',
+                
+                // Products
+                'product.add.cart': 'أضف إلى السلة',
+                'product.out.stock': 'نفد من المخزون',
+                'product.reviews': 'مراجعة',
+                'product.found': 'منتج موجود',
+                'product.no.found': 'لم يتم العثور على منتجات',
+                'product.search.again': 'جرب تغيير معايير البحث.',
+                
+                // Common
+                'common.loading': 'جاري التحميل...',
+                'common.save': 'حفظ',
+                'common.cancel': 'إلغاء',
+                'common.delete': 'حذف',
+                'common.edit': 'تعديل',
+                'common.close': 'إغلاق',
+                'common.yes': 'نعم',
+                'common.no': 'لا',
+                'common.search': 'بحث',
+                'common.filter': 'تصفية',
+                'common.clear': 'مسح'
             }
         };
     }
@@ -440,7 +817,7 @@ class LanguageManager {
             const key = element.getAttribute('data-translate');
             const translation = this.t(key);
             
-            if (element.tagName === 'INPUT' && element.type === 'text') {
+            if (element.tagName === 'INPUT' && (element.type === 'text' || element.type === 'search')) {
                 element.placeholder = translation;
             } else {
                 element.innerHTML = translation;
@@ -482,6 +859,76 @@ class LanguageManager {
                 nameSpan.textContent = this.t(categoryKey);
             }
         });
+
+        // Update hero section
+        const heroTitle = document.querySelector('.hero-text h1');
+        if (heroTitle) {
+            heroTitle.innerHTML = this.t('hero.title');
+        }
+
+        const heroSubtitle = document.querySelector('.hero-text p');
+        if (heroSubtitle) {
+            heroSubtitle.textContent = this.t('hero.subtitle');
+        }
+
+        // Update buttons
+        const shopBtn = document.querySelector('.btn-primary');
+        if (shopBtn) {
+            shopBtn.textContent = this.t('hero.cta.shop');
+        }
+
+        const categoriesBtn = document.querySelector('.btn-secondary');
+        if (categoriesBtn) {
+            categoriesBtn.textContent = this.t('hero.cta.categories');
+        }
+
+        // Update features
+        const features = document.querySelectorAll('.feature');
+        features.forEach((feature, index) => {
+            const featureKeys = ['shipping', 'security', 'quality'];
+            if (featureKeys[index]) {
+                const title = feature.querySelector('h3');
+                const desc = feature.querySelector('p');
+                if (title) title.textContent = this.t(`feature.${featureKeys[index]}.title`);
+                if (desc) desc.textContent = this.t(`feature.${featureKeys[index]}.desc`);
+            }
+        });
+
+        // Update footer
+        const footerSections = document.querySelectorAll('.footer-section');
+        footerSections.forEach(section => {
+            const links = section.querySelectorAll('a');
+            links.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href === '#' && link.textContent) {
+                    // Map common footer links
+                    const linkMap = {
+                        'Hakkımızda': 'footer.about',
+                        'İletişim': 'footer.contact',
+                        'Kargo & Teslimat': 'footer.shipping',
+                        'İade & Değişim': 'footer.returns',
+                        'Gizlilik Politikası': 'footer.privacy'
+                    };
+                    
+                    const key = linkMap[link.textContent];
+                    if (key) {
+                        link.textContent = this.t(key);
+                    }
+                }
+            });
+        });
+
+        // Update sort options
+        const sortSelect = document.getElementById('sortSelect');
+        if (sortSelect) {
+            const options = sortSelect.querySelectorAll('option');
+            const sortKeys = ['featured', 'price-low', 'price-high', 'rating', 'name'];
+            options.forEach((option, index) => {
+                if (sortKeys[index]) {
+                    option.textContent = this.t(`sort.${sortKeys[index].replace('-', '.')}`);
+                }
+            });
+        }
     }
 
     // Dispatch language change event
@@ -502,7 +949,11 @@ class LanguageManager {
             { code: 'tr', name: 'Türkçe', flag: '🇹🇷' },
             { code: 'en', name: 'English', flag: '🇺🇸' },
             { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
-            { code: 'fr', name: 'Français', flag: '🇫🇷' }
+            { code: 'fr', name: 'Français', flag: '🇫🇷' },
+            { code: 'es', name: 'Español', flag: '🇪🇸' },
+            { code: 'it', name: 'Italiano', flag: '🇮🇹' },
+            { code: 'ru', name: 'Русский', flag: '🇷🇺' },
+            { code: 'ar', name: 'العربية', flag: '🇸🇦' }
         ];
     }
 
@@ -512,7 +963,11 @@ class LanguageManager {
             tr: new Intl.NumberFormat('tr-TR', { style: 'currency', currency: 'TRY' }),
             en: new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }),
             de: new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }),
-            fr: new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' })
+            fr: new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }),
+            es: new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }),
+            it: new Intl.NumberFormat('it-IT', { style: 'currency', currency: 'EUR' }),
+            ru: new Intl.NumberFormat('ru-RU', { style: 'currency', currency: 'RUB' }),
+            ar: new Intl.NumberFormat('ar-SA', { style: 'currency', currency: 'SAR' })
         };
 
         const formatter = formatters[this.currentLanguage] || formatters.tr;
@@ -525,7 +980,11 @@ class LanguageManager {
             tr: new Intl.DateTimeFormat('tr-TR'),
             en: new Intl.DateTimeFormat('en-US'),
             de: new Intl.DateTimeFormat('de-DE'),
-            fr: new Intl.DateTimeFormat('fr-FR')
+            fr: new Intl.DateTimeFormat('fr-FR'),
+            es: new Intl.DateTimeFormat('es-ES'),
+            it: new Intl.DateTimeFormat('it-IT'),
+            ru: new Intl.DateTimeFormat('ru-RU'),
+            ar: new Intl.DateTimeFormat('ar-SA')
         };
 
         const formatter = formatters[this.currentLanguage] || formatters.tr;

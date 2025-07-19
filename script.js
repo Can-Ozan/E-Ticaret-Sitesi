@@ -185,6 +185,447 @@ const products = [
         reviews: 189,
         inStock: true,
         badge: 'Gaming'
+    },
+    {
+        id: 9,
+        name: 'iPhone 15 Pro Max',
+        price: 54999,
+        originalPrice: 59999,
+        image: 'https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=800',
+        images: [
+            'https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=800',
+            'https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=800'
+        ],
+        category: 'electronics',
+        description: 'En gelişmiş iPhone modeli. A17 Pro çip, titanium tasarım ve profesyonel kamera sistemi.',
+        features: [
+            'A17 Pro çip',
+            'Titanium tasarım',
+            'Pro kamera sistemi',
+            '256GB depolama',
+            '5G desteği'
+        ],
+        rating: 4.9,
+        reviews: 1250,
+        inStock: true,
+        badge: 'Yeni'
+    },
+    {
+        id: 10,
+        name: 'Samsung 4K Smart TV 55"',
+        price: 18999,
+        originalPrice: 22999,
+        image: 'https://images.pexels.com/photos/1201996/pexels-photo-1201996.jpeg?auto=compress&cs=tinysrgb&w=800',
+        images: [
+            'https://images.pexels.com/photos/1201996/pexels-photo-1201996.jpeg?auto=compress&cs=tinysrgb&w=800'
+        ],
+        category: 'electronics',
+        description: '55 inç 4K UHD Smart TV. HDR desteği ve akıllı işletim sistemi ile mükemmel görüntü kalitesi.',
+        features: [
+            '4K UHD çözünürlük',
+            'HDR10+ desteği',
+            'Smart TV özellikleri',
+            'Ses komut desteği',
+            'Çoklu bağlantı seçenekleri'
+        ],
+        rating: 4.6,
+        reviews: 890,
+        inStock: true,
+        badge: 'İndirim'
+    },
+    {
+        id: 11,
+        name: 'MacBook Air M2',
+        price: 32999,
+        image: 'https://images.pexels.com/photos/205421/pexels-photo-205421.jpeg?auto=compress&cs=tinysrgb&w=800',
+        images: [
+            'https://images.pexels.com/photos/205421/pexels-photo-205421.jpeg?auto=compress&cs=tinysrgb&w=800'
+        ],
+        category: 'electronics',
+        description: 'Apple M2 çipli ultra ince laptop. Tüm gün süren pil ömrü ve sessiz çalışma.',
+        features: [
+            'Apple M2 çip',
+            '13.6" Liquid Retina ekran',
+            '18 saat pil ömrü',
+            '256GB SSD',
+            'MagSafe şarj'
+        ],
+        rating: 4.8,
+        reviews: 567,
+        inStock: true
+    },
+    {
+        id: 12,
+        name: 'Sony WH-1000XM5 Kulaklık',
+        price: 3299,
+        originalPrice: 3999,
+        image: 'https://images.pexels.com/photos/3394651/pexels-photo-3394651.jpeg?auto=compress&cs=tinysrgb&w=800',
+        images: [
+            'https://images.pexels.com/photos/3394651/pexels-photo-3394651.jpeg?auto=compress&cs=tinysrgb&w=800'
+        ],
+        category: 'electronics',
+        description: 'Endüstri lideri gürültü engelleme teknolojisi ile premium kablosuz kulaklık.',
+        features: [
+            'Gelişmiş gürültü engelleme',
+            '30 saat pil ömrü',
+            'Hızlı şarj',
+            'Çoklu cihaz bağlantısı',
+            'Premium ses kalitesi'
+        ],
+        rating: 4.7,
+        reviews: 1123,
+        inStock: true,
+        badge: 'İndirim'
+    },
+    
+    // Moda & Giyim
+    {
+        id: 13,
+        name: 'Nike Air Max 270',
+        price: 1899,
+        originalPrice: 2299,
+        image: 'https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=800',
+        images: [
+            'https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=800'
+        ],
+        category: 'fashion',
+        description: 'Maksimum konfor ve stil sunan Nike Air Max ayakkabı. Günlük kullanım için ideal.',
+        features: [
+            'Air Max yastıklama',
+            'Nefes alan malzeme',
+            'Dayanıklı taban',
+            'Modern tasarım',
+            'Çoklu renk seçenekleri'
+        ],
+        rating: 4.5,
+        reviews: 789,
+        inStock: true,
+        badge: 'İndirim'
+    },
+    {
+        id: 14,
+        name: 'Levi\'s 501 Original Jeans',
+        price: 899,
+        image: 'https://images.pexels.com/photos/1598507/pexels-photo-1598507.jpeg?auto=compress&cs=tinysrgb&w=800',
+        images: [
+            'https://images.pexels.com/photos/1598507/pexels-photo-1598507.jpeg?auto=compress&cs=tinysrgb&w=800'
+        ],
+        category: 'fashion',
+        description: 'Klasik Levi\'s 501 jean. Zamansız tasarım ve dayanıklı kumaş ile uzun yıllar kullanım.',
+        features: [
+            '100% pamuk denim',
+            'Klasik straight fit',
+            'Dayanıklı dikişler',
+            'Vintage görünüm',
+            'Çoklu beden seçenekleri'
+        ],
+        rating: 4.6,
+        reviews: 456,
+        inStock: true,
+        badge: 'Klasik'
+    },
+    {
+        id: 15,
+        name: 'Zara Blazer Ceket',
+        price: 1299,
+        originalPrice: 1599,
+        image: 'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800',
+        images: [
+            'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800'
+        ],
+        category: 'fashion',
+        description: 'Modern kesim blazer ceket. İş ve günlük kullanım için çok amaçlı tasarım.',
+        features: [
+            'Modern slim fit',
+            'Kaliteli kumaş',
+            'İç cep detayları',
+            'Çok amaçlı kullanım',
+            'Profesyonel görünüm'
+        ],
+        rating: 4.4,
+        reviews: 234,
+        inStock: true,
+        badge: 'İndirim'
+    },
+    
+    // Ev & Yaşam
+    {
+        id: 16,
+        name: 'Dyson V15 Detect Süpürge',
+        price: 7999,
+        originalPrice: 8999,
+        image: 'https://images.pexels.com/photos/4239091/pexels-photo-4239091.jpeg?auto=compress&cs=tinysrgb&w=800',
+        images: [
+            'https://images.pexels.com/photos/4239091/pexels-photo-4239091.jpeg?auto=compress&cs=tinysrgb&w=800'
+        ],
+        category: 'home',
+        description: 'Lazer teknolojisi ile mikroskobik tozları bile tespit eden kablosuz süpürge.',
+        features: [
+            'Lazer toz tespiti',
+            '60 dakika çalışma',
+            'HEPA filtrasyon',
+            'Çoklu başlık',
+            'LCD ekran'
+        ],
+        rating: 4.8,
+        reviews: 345,
+        inStock: true,
+        badge: 'İndirim'
+    },
+    {
+        id: 17,
+        name: 'Philips Hue Akıllı Ampul Seti',
+        price: 1599,
+        image: 'https://images.pexels.com/photos/1112598/pexels-photo-1112598.jpeg?auto=compress&cs=tinysrgb&w=800',
+        images: [
+            'https://images.pexels.com/photos/1112598/pexels-photo-1112598.jpeg?auto=compress&cs=tinysrgb&w=800'
+        ],
+        category: 'home',
+        description: 'WiFi kontrollü akıllı LED ampul seti. 16 milyon renk seçeneği ve ses kontrolü.',
+        features: [
+            '16 milyon renk',
+            'WiFi kontrolü',
+            'Ses komut desteği',
+            'Zamanlayıcı',
+            'Enerji tasarrufu'
+        ],
+        rating: 4.7,
+        reviews: 678,
+        inStock: true,
+        badge: 'Akıllı'
+    },
+    {
+        id: 18,
+        name: 'IKEA MALM Yatak Odası Takımı',
+        price: 4999,
+        originalPrice: 5999,
+        image: 'https://images.pexels.com/photos/1957477/pexels-photo-1957477.jpeg?auto=compress&cs=tinysrgb&w=800',
+        images: [
+            'https://images.pexels.com/photos/1957477/pexels-photo-1957477.jpeg?auto=compress&cs=tinysrgb&w=800'
+        ],
+        category: 'home',
+        description: 'Modern tasarım yatak odası takımı. Yatak, komodin ve gardırop dahil.',
+        features: [
+            'Komplet yatak odası',
+            'Modern tasarım',
+            'Kaliteli malzeme',
+            'Kolay montaj',
+            '10 yıl garanti'
+        ],
+        rating: 4.5,
+        reviews: 234,
+        inStock: true,
+        badge: 'İndirim'
+    },
+    
+    // Spor & Outdoor
+    {
+        id: 19,
+        name: 'Adidas Ultraboost 22',
+        price: 2299,
+        originalPrice: 2699,
+        image: 'https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=800',
+        images: [
+            'https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?auto=compress&cs=tinysrgb&w=800'
+        ],
+        category: 'sports',
+        description: 'Koşu için tasarlanmış yüksek performanslı spor ayakkabı. Boost teknolojisi ile maksimum enerji geri dönüşü.',
+        features: [
+            'Boost orta taban',
+            'Primeknit üst',
+            'Continental kauçuk taban',
+            'Enerji geri dönüşü',
+            'Hafif tasarım'
+        ],
+        rating: 4.8,
+        reviews: 567,
+        inStock: true,
+        badge: 'İndirim'
+    },
+    {
+        id: 20,
+        name: 'Decathlon Kamp Çadırı 4 Kişilik',
+        price: 1899,
+        image: 'https://images.pexels.com/photos/2398220/pexels-photo-2398220.jpeg?auto=compress&cs=tinysrgb&w=800',
+        images: [
+            'https://images.pexels.com/photos/2398220/pexels-photo-2398220.jpeg?auto=compress&cs=tinysrgb&w=800'
+        ],
+        category: 'sports',
+        description: '4 kişilik su geçirmez kamp çadırı. Kolay kurulum ve dayanıklı malzeme.',
+        features: [
+            '4 kişilik kapasite',
+            'Su geçirmez',
+            'Kolay kurulum',
+            'Rüzgar dayanımı',
+            'Taşıma çantası'
+        ],
+        rating: 4.4,
+        reviews: 123,
+        inStock: true
+    },
+    
+    // Kitap & Medya
+    {
+        id: 21,
+        name: 'Sapiens - Yuval Noah Harari',
+        price: 149,
+        image: 'https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg?auto=compress&cs=tinysrgb&w=800',
+        images: [
+            'https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg?auto=compress&cs=tinysrgb&w=800'
+        ],
+        category: 'books',
+        description: 'İnsanlığın kısa tarihi. Dünya çapında milyonlarca okuyucuya ulaşan çok satan kitap.',
+        features: [
+            '512 sayfa',
+            'Türkçe çeviri',
+            'Bestseller',
+            'Tarih kategorisi',
+            'Kaliteli baskı'
+        ],
+        rating: 4.9,
+        reviews: 2345,
+        inStock: true,
+        badge: 'Çok Satan'
+    },
+    {
+        id: 22,
+        name: 'PlayStation 5 Konsol',
+        price: 16999,
+        originalPrice: 18999,
+        image: 'https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=800',
+        images: [
+            'https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=800'
+        ],
+        category: 'electronics',
+        description: 'Yeni nesil oyun konsolu. 4K gaming ve ultra hızlı SSD ile mükemmel oyun deneyimi.',
+        features: [
+            '4K gaming',
+            'Ultra hızlı SSD',
+            'Ray tracing',
+            '3D ses teknolojisi',
+            'DualSense kontrolcü'
+        ],
+        rating: 4.9,
+        reviews: 1567,
+        inStock: true,
+        badge: 'İndirim'
+    },
+    
+    // Güzellik & Bakım
+    {
+        id: 23,
+        name: 'L\'Oreal Paris Serum Seti',
+        price: 599,
+        originalPrice: 799,
+        image: 'https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg?auto=compress&cs=tinysrgb&w=800',
+        images: [
+            'https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg?auto=compress&cs=tinysrgb&w=800'
+        ],
+        category: 'beauty',
+        description: 'Anti-aging serum seti. Hyaluronik asit ve vitamin C ile cilt yenileme.',
+        features: [
+            'Hyaluronik asit',
+            'Vitamin C',
+            'Anti-aging',
+            'Tüm cilt tipleri',
+            'Dermatolog onaylı'
+        ],
+        rating: 4.6,
+        reviews: 456,
+        inStock: true,
+        badge: 'İndirim'
+    },
+    
+    // Otomotiv
+    {
+        id: 24,
+        name: 'Michelin Lastik Seti 205/55R16',
+        price: 3999,
+        originalPrice: 4599,
+        image: 'https://images.pexels.com/photos/3806288/pexels-photo-3806288.jpeg?auto=compress&cs=tinysrgb&w=800',
+        images: [
+            'https://images.pexels.com/photos/3806288/pexels-photo-3806288.jpeg?auto=compress&cs=tinysrgb&w=800'
+        ],
+        category: 'automotive',
+        description: '4 adet Michelin marka yaz lastiği. Üstün kavrama ve uzun ömür.',
+        features: [
+            '4 adet lastik',
+            'Yaz lastiği',
+            'Üstün kavrama',
+            'Uzun ömür',
+            'Düşük yakıt tüketimi'
+        ],
+        rating: 4.7,
+        reviews: 234,
+        inStock: true,
+        badge: 'İndirim'
+    },
+    {
+        id: 25,
+        name: 'Bosch Akü 12V 60Ah',
+        price: 1299,
+        image: 'https://images.pexels.com/photos/3806288/pexels-photo-3806288.jpeg?auto=compress&cs=tinysrgb&w=800',
+        images: [
+            'https://images.pexels.com/photos/3806288/pexels-photo-3806288.jpeg?auto=compress&cs=tinysrgb&w=800'
+        ],
+        category: 'automotive',
+        description: 'Yüksek performanslı araç aküsü. Soğuk havada güvenilir çalıştırma.',
+        features: [
+            '12V 60Ah',
+            'Soğuk hava performansı',
+            'Uzun ömür',
+            '2 yıl garanti',
+            'Bakım gerektirmez'
+        ],
+        rating: 4.5,
+        reviews: 345,
+        inStock: true
+    },
+    
+    // Oyuncak & Hobi
+    {
+        id: 26,
+        name: 'LEGO Creator Expert Set',
+        price: 2999,
+        originalPrice: 3499,
+        image: 'https://images.pexels.com/photos/1337247/pexels-photo-1337247.jpeg?auto=compress&cs=tinysrgb&w=800',
+        images: [
+            'https://images.pexels.com/photos/1337247/pexels-photo-1337247.jpeg?auto=compress&cs=tinysrgb&w=800'
+        ],
+        category: 'toys',
+        description: 'Detaylı LEGO Creator Expert seti. 2500+ parça ile saatlerce eğlence.',
+        features: [
+            '2500+ parça',
+            'Detaylı tasarım',
+            'Yetişkin koleksiyonu',
+            'Kaliteli malzeme',
+            'Adım adım rehber'
+        ],
+        rating: 4.8,
+        reviews: 567,
+        inStock: true,
+        badge: 'İndirim'
+    },
+    {
+        id: 27,
+        name: 'Ravensburger 1000 Parça Puzzle',
+        price: 199,
+        image: 'https://images.pexels.com/photos/1337247/pexels-photo-1337247.jpeg?auto=compress&cs=tinysrgb&w=800',
+        images: [
+            'https://images.pexels.com/photos/1337247/pexels-photo-1337247.jpeg?auto=compress&cs=tinysrgb&w=800'
+        ],
+        category: 'toys',
+        description: '1000 parçalık kaliteli puzzle. Aile boş zamanları için ideal aktivite.',
+        features: [
+            '1000 parça',
+            'Kaliteli karton',
+            'Renkli tasarım',
+            'Aile aktivitesi',
+            'Zihin geliştirici'
+        ],
+        rating: 4.6,
+        reviews: 123,
+        inStock: true
     }
 ];
 
@@ -195,7 +636,9 @@ const categories = [
     { id: 'home', name: 'Ev & Yaşam', icon: 'fas fa-home', productCount: products.filter(p => p.category === 'home').length },
     { id: 'sports', name: 'Spor & Outdoor', icon: 'fas fa-dumbbell', productCount: products.filter(p => p.category === 'sports').length },
     { id: 'books', name: 'Kitap & Medya', icon: 'fas fa-book', productCount: products.filter(p => p.category === 'books').length },
-    { id: 'beauty', name: 'Güzellik & Bakım', icon: 'fas fa-sparkles', productCount: products.filter(p => p.category === 'beauty').length }
+    { id: 'beauty', name: 'Güzellik & Bakım', icon: 'fas fa-sparkles', productCount: products.filter(p => p.category === 'beauty').length },
+    { id: 'automotive', name: 'Otomotiv', icon: 'fas fa-car', productCount: products.filter(p => p.category === 'automotive').length },
+    { id: 'toys', name: 'Oyuncak & Hobi', icon: 'fas fa-gamepad', productCount: products.filter(p => p.category === 'toys').length }
 ];
 
 // Global State
@@ -240,17 +683,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Check Authentication Status
 function checkAuthStatus() {
-    const userBtn = document.querySelector('.action-btn');
-    const userBtnText = userBtn?.querySelector('span');
+    const userBtn = document.querySelector('.action-btn span[data-translate="header.account"]');
+    if (!userBtn) return;
     
-    if (currentUser && userBtnText) {
-        userBtnText.textContent = currentUser.firstName;
-        userBtn.onclick = () => showUserMenu();
+    const userBtnText = userBtn;
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    
+    if (currentUser) {
+        userBtnText.textContent = currentUser.firstName || 'Hesabım';
+        userBtn.parentElement.onclick = () => showUserMenu();
+    } else {
+        userBtn.parentElement.onclick = () => window.location.href = 'auth.html';
     }
 }
 
 // Show User Menu
 function showUserMenu() {
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    if (!currentUser) return;
+    
     const menu = document.createElement('div');
     menu.className = 'user-dropdown';
     menu.innerHTML = `
@@ -264,10 +715,10 @@ function showUserMenu() {
         </div>
     `;
     
-    // Position and show menu
+    // Pozisyonlandırma ve gösterim
     document.body.appendChild(menu);
     
-    // Remove menu when clicking outside
+    // Dışarı tıklandığında menüyü kapat
     setTimeout(() => {
         document.addEventListener('click', function removeMenu(e) {
             if (!menu.contains(e.target)) {
@@ -282,11 +733,9 @@ function showUserMenu() {
 function logout() {
     if (confirm('Çıkış yapmak istediğinizden emin misiniz?')) {
         localStorage.removeItem('currentUser');
-        localStorage.removeItem('rememberUser');
-        currentUser = null;
         showNotification('Başarıyla çıkış yaptınız', 'info');
         setTimeout(() => {
-            location.reload();
+            window.location.href = 'index.html';
         }, 1500);
     }
 }
